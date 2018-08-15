@@ -1,0 +1,42 @@
+{
+  "name": "@litert/paypal-client",
+  "version": "0.1.0",
+  "description": "The client for Paypal APIs.",
+  "main": "./libs/index.js",
+  "scripts": {
+    "prepare": "npm run rebuild",
+    "build": "tsc -p tsconfig.json",
+    "rebuild": "npm run clean && npm run lint && npm run build",
+    "test": "echo See directory src/samples",
+    "clean": "rm -rf libs samples",
+    "lint": "tslint -p . -c tslint.json"
+  },
+  "keywords": [
+    "litert",
+    "lrt",
+    "client",
+    "paypal"
+  ],
+  "author": "Angus.Fenying <fenying@litert.org> (https://fenying.net)",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/litert/paypal-client.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/litert/paypal-client.js/issues"
+  },
+  "homepage": "https://github.com/litert/paypal-client.js#readme",
+  "types": "./libs/index.d.ts",
+  "typings": "./libs/index.d.ts",
+  "dependencies": {
+    "@litert/http": "^0.5.1"
+  },
+  "devDependencies": {
+    "@types/node": "^10.5.2",
+    "typescript": "^2.9.2"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  }
+}

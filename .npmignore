@@ -1,0 +1,12 @@
+/.git/
+/.vscode/
+/.gitignore
+/.npmignore
+/.npmrc
+/tslint.json
+/tsconfig.json
+/node_modules/
+/samples/
+/config.json
+/config.json-default
+/webhooks.log
