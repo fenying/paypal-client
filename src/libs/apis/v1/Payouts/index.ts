@@ -14,16 +14,12 @@
  *  limitations under the License.
  */
 
-import * as Authentication from "./Authentication";
-import * as Payments from "./Payments";
-import * as Payouts from "./Payouts";
-import * as Webhooks from "./Webhooks";
-
-export * from "./Common";
+import * as ViewPayout from "./ViewPayout";
+import * as CreatePayout from "./CreatePayout";
 
 export {
-    Authentication,
-    Payments,
-    Payouts,
-    Webhooks
+    CreatePayout,
+    ViewPayout
 };
+
+export * from "./Common";

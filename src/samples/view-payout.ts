@@ -14,16 +14,22 @@
  *  limitations under the License.
  */
 
-import * as Authentication from "./Authentication";
-import * as Payments from "./Payments";
-import * as Payouts from "./Payouts";
-import * as Webhooks from "./Webhooks";
+// tslint:disable:no-console
+import * as Paypal from "../libs";
 
-export * from "./Common";
+(async () => {
 
-export {
-    Authentication,
-    Payments,
-    Payouts,
-    Webhooks
-};
+    const cli: Paypal.IClient = Paypal.createClient(
+        require(`${__dirname}/../config.json`)
+    );
+
+    let cmd = new Paypal.APIs.v1.Payouts.ViewPayout.Command(
+        process.argv[2]
+    );
+
+    console.log(JSON.stringify(await cli.execute(cmd), null, 2));
+
+})().catch((e) => {
+
+    console.error(e);
+});
